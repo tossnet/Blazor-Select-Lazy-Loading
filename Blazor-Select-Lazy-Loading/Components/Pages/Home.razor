@@ -16,15 +16,11 @@ Welcome to your new app.
 </button>
 
 
-<div id="lazy-loagind-container" style="width:300px">
+<div style="width:300px">
     <select id="select-lazy-loading"
             class="form-select @_displayElements"
             @onfocus="OnfocusSelect">
-        @if (optionsList is null)
-        {
-            <option hidden disabled>gg</option>
-        }
-        else
+        @if (optionsList not is null)
     	{
     		@foreach (var option in optionsList)
     		{
