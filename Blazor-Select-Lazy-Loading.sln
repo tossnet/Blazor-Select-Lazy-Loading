@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34814.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor-Select-Lazy-Loading", "Blazor-Select-Lazy-Loading\Blazor-Select-Lazy-Loading.csproj", "{4899D5A2-091D-4695-A77E-47A0562D518E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4899D5A2-091D-4695-A77E-47A0562D518E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4899D5A2-091D-4695-A77E-47A0562D518E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4899D5A2-091D-4695-A77E-47A0562D518E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4899D5A2-091D-4695-A77E-47A0562D518E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B46D6F7-5DD9-445F-AF85-CB2978179F62}
+	EndGlobalSection
+EndGlobal

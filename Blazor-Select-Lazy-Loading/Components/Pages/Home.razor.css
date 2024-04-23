@@ -1,0 +1,40 @@
+﻿
+.hide-elements:focus {
+     display: none;
+}
+
+.show-elements:focus {
+    display: block;
+}
+
+#progress-container {
+    width: inherit;
+    background-color: white;
+    position: absolute;
+    margin-top: 5px;
+    height: 75px;
+    padding: 20px;
+    border: 1px solid #ced4da;
+    border-radius: .5rem;
+    -webkit-box-shadow: 0px 7px 22px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 7px 22px 0px rgba(0,0,0,0.15);
+    box-shadow: 0px 7px 22px 0px rgba(0,0,0,0.15);
+}
+
+#progress-circle {
+    stroke: gray;
+    fill: none;
+    stroke-width: 10px;
+    animation: spin 1s linear infinite;
+    transform-origin: center;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

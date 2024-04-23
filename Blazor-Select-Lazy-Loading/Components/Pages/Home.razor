@@ -5,3 +5,82 @@
 <h1>Hello, world!</h1>
 
 Welcome to your new app.
+
+<br /> 
+
+<button type="button"
+        class="btn btn-secondary"
+        style="margin-bottom:20px"
+        onclick="@OnClickClearList">
+    Clear list
+</button>
+
+
+<div id="lazy-loagind-container" style="width:300px">
+    <select id="select-lazy-loading"
+            class="form-select @_displayElements"
+            @onfocus="OnfocusSelect">
+        @if (optionsList is null)
+        {
+            <option hidden disabled>gg</option>
+        }
+        else
+    	{
+    		@foreach (var option in optionsList)
+    		{
+    			<option>@option</option>
+    		}
+    	}
+    </select>
+    
+    <div id="progress-container" style="display:@_displayProgressRing">
+        <svg width="100%" height="30" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50"
+                    cy="50"
+                    r="45"
+                    stroke-dasharray="282.74"
+                    stroke-dashoffset="75"
+                    id="progress-circle"/>
+        </svg>
+    </div>
+</div>
+
+<p>select a fruit</p>
+
+
+@code                                               
+{
+    string[] optionsList;
+    string _displayProgressRing = "none";
+    string _displayElements = "hide-elements";
+
+    private async Task OnfocusSelect(FocusEventArgs e)
+    {
+        if (optionsList is not null)
+            return; 
+
+        _displayProgressRing = "block";
+        // Simulate asynchronous loading to demonstrate a loading indicator
+        await Task.Delay(1000);
+
+        optionsList = new[] { "Apple",
+                            "Banana", 
+                            "Cherry", 
+                            "Date", 
+                            "Elderberry", 
+                            "Fig", 
+                            "Grape", 
+                            "Honeydew", 
+                            "Iceberg", 
+                            "Jackfruit", "Kiwi", "Lemon", "Mango", "Nectarine", "Orange", "Papaya", "Quince", "Raspberry", "Strawberry", "Tangerine" };
+
+        _displayElements = "show-elements";
+        _displayProgressRing = "none";
+    }
+
+    private void OnClickClearList(MouseEventArgs e)
+	{
+		optionsList = null;
+        _displayElements = "hide-elements";
+	}
+}
