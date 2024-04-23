@@ -20,11 +20,11 @@ Welcome to your new app.
     <select id="select-lazy-loading"
             class="form-select @_displayElements"
             @onfocus="OnfocusSelect">
-        @if (optionsList not is null)
+        @if (optionsList is not null)
     	{
     		@foreach (var option in optionsList)
     		{
-    			<option>@option</option>
+                <option>@option</option>
     		}
     	}
     </select>
